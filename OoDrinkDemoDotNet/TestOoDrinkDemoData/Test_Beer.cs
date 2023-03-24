@@ -54,6 +54,7 @@ namespace TestOoDrinkDemoData
             string? CachedDescription = _TestedBeer?.Description;
             Assert.IsNotNull(CachedDescription);
             Assert.AreEqual(_ExpectedDescription, CachedDescription);
+            Assert.AreEqual(CachedDescription, _TestedBeer?.Description);
         }
     }
 
@@ -101,6 +102,7 @@ namespace TestOoDrinkDemoData
             string? CachedDescription = _TestedBeer?.Description;
             Assert.IsNotNull(CachedDescription);
             Assert.AreEqual(_ExpectedDescription, CachedDescription);
+            Assert.AreEqual(CachedDescription, _TestedBeer?.Description);
         }
     }
 }

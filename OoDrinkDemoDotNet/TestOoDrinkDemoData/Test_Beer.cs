@@ -56,4 +56,51 @@ namespace TestOoDrinkDemoData
             Assert.AreEqual(_ExpectedDescription, CachedDescription);
         }
     }
+
+
+    [TestClass]
+    public class Test_Beer_New_Bogus
+    {
+        private const string _Name = "Bogus Flat";
+        private const bool _IsCarbonated = false;
+        private const double _AlcoholPercentage = 6.5;
+        private const string _ExpectedDescription = _Name + ", not carbonated, 6.5%.";
+
+        private Beer? _TestedBeer = null;
+
+        [TestInitialize]
+        public void SetUp()
+        {
+            _TestedBeer = new Beer(_Name, _IsCarbonated, _AlcoholPercentage);
+        }
+
+        [TestMethod]
+        public void Test_name()
+        {
+            Assert.IsNotNull(_TestedBeer?.Name);
+            Assert.AreEqual(_Name, _TestedBeer.Name);
+        }
+
+        [TestMethod]
+        public void Test_IsCarbonated()
+        {
+            Assert.IsNotNull(_TestedBeer);
+            Assert.AreEqual(_IsCarbonated, _TestedBeer?.IsCarbonated);
+        }
+
+        [TestMethod]
+        public void Test_AlcoholPercentage()
+        {
+            Assert.IsNotNull(_TestedBeer);
+            Assert.AreEqual(_AlcoholPercentage, _TestedBeer?.AlcoholPercentage);
+        }
+
+        [TestMethod]
+        public void Test_Description()
+        {
+            string? CachedDescription = _TestedBeer?.Description;
+            Assert.IsNotNull(CachedDescription);
+            Assert.AreEqual(_ExpectedDescription, CachedDescription);
+        }
+    }
 }

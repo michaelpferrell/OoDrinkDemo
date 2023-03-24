@@ -11,7 +11,7 @@
         public string Name { get; init; }
         public bool IsCarbonated { get; init; }
 
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -19,7 +19,7 @@
             }
         }
 
-        private string CarbonatedString
+        protected string CarbonatedString
         {
             get
             {

@@ -16,7 +16,7 @@ namespace TestOoDrinkDemoData
         [TestInitialize]
         public void SetUp()
         {
-            _TestedDrink = new Drink(_Name, _IsCarbonated);
+            _TestedDrink = new Drink(_Name, _CarbonationType);
         }
 
         [TestMethod]
@@ -63,7 +63,7 @@ namespace TestOoDrinkDemoData
         [TestInitialize]
         public void SetUp()
         {
-            _TestedDrink = new Drink(_Name, _IsCarbonated);
+            _TestedDrink = new Drink(_Name, _CarbonationType);
         }
 
         [TestMethod]

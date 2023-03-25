@@ -2,11 +2,24 @@
 {
     public class Drink
     {
-        public Drink(string NameIn, bool IsCarbonatedIn)
+        [Obsolete]
+        public Drink(string NameIn, bool IsCarbonatedIn): 
+                this(NameIn, IsCarbonatedIn, CarbonationTypeFromBool(IsCarbonatedIn))
+        {
+        }
+
+        [Obsolete]
+        public Drink(string NameIn, bool IsCarbonatedIn, 
+                CarbonationEnum CarbonationTypeIn):
+                this(NameIn, CarbonationTypeIn)
+        {
+        }
+
+        public Drink(string NameIn, CarbonationEnum CarbonationTypeIn)
         {
             Name = NameIn;
-            IsCarbonated = IsCarbonatedIn;
-            CarbonationType = CarbonationTypeFromBool(IsCarbonated);
+            CarbonationType = CarbonationTypeIn;
+            IsCarbonated = (CarbonationTypeIn == CarbonationEnum.Carbonated);
         }
 
         public string Name { get; init; }
@@ -47,7 +60,7 @@
             }
         }
 
-        protected CarbonationEnum CarbonationTypeFromBool(bool BoolIn)
+        protected static CarbonationEnum CarbonationTypeFromBool(bool BoolIn)
         {
             if (BoolIn)
             {

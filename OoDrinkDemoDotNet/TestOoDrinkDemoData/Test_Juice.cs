@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OoDrinkDemoData;
-using System.Xml.Linq;
+﻿using OoDrinkDemoData;
 
 namespace TestOoDrinkDemoData
 {

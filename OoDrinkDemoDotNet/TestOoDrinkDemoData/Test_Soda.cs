@@ -6,7 +6,6 @@ namespace TestOoDrinkDemoData
     public class Test_Soda_New_Pepsi
     {
         private const string _Name = "Pepsi";
-        private const bool _IsCarbonated = true;
         private const CarbonationEnum _Carbonation = CarbonationEnum.Carbonated;
         private const string _ExpectedDescription = _Name + ", carbonated.";
 
@@ -34,13 +33,6 @@ namespace TestOoDrinkDemoData
         }
 
         [TestMethod]
-        public void Test_IsCarbonated()
-        {
-            Assert.IsNotNull(_TestedSoda);
-            Assert.AreEqual(_IsCarbonated, _TestedSoda.IsCarbonated);
-        }
-
-        [TestMethod]
         public void Test_CarbonationType()
         {
             Assert.IsNotNull(_TestedSoda);
@@ -61,7 +53,6 @@ namespace TestOoDrinkDemoData
     public class Test_Soda_New_Nitro_Pepsi
     {
         private const string _Name = "Nitro Pepsi";
-        private const bool _IsCarbonated = false;
         private const CarbonationEnum _Carbonation = CarbonationEnum.Nitrogenated;
         private const string _ExpectedDescription = _Name + ", nitrogenated.";
 
@@ -78,13 +69,6 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedSoda?.Name);
             Assert.AreEqual(_Name, _TestedSoda?.Name);
-        }
-
-        [TestMethod]
-        public void Test_IsCarbonated()
-        {
-            Assert.IsNotNull(_TestedSoda);
-            Assert.AreEqual(_IsCarbonated, _TestedSoda.IsCarbonated);
         }
 
         [TestMethod]

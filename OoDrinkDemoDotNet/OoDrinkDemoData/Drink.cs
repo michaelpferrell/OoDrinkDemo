@@ -2,21 +2,13 @@
 {
     public class Drink
     {
-        [Obsolete]
-        public Drink(string NameIn, bool IsCarbonatedIn): 
-                this(NameIn, CarbonationTypeFromBool(IsCarbonatedIn))
-        {
-        }
-
         public Drink(string NameIn, CarbonationEnum CarbonationTypeIn)
         {
             Name = NameIn;
             CarbonationType = CarbonationTypeIn;
-            IsCarbonated = (CarbonationTypeIn == CarbonationEnum.Carbonated);
         }
 
         public string Name { get; init; }
-        public bool IsCarbonated { get; init; }
         public CarbonationEnum CarbonationType { get; init; }
 
         public virtual string Description

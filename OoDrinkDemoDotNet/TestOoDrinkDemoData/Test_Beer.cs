@@ -6,7 +6,6 @@ namespace TestOoDrinkDemoData
     public class Test_Beer_New_Budweiser
     {
         private const string _Name = "Budweiser";
-        private const bool _IsCarbonated = true;
         private const CarbonationEnum _Carbonation = CarbonationEnum.Carbonated;
         private const double _AlcoholPercentage = 5.0;
         private const string _ExpectedDescription = _Name + ", carbonated, 5%.";
@@ -32,13 +31,6 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedBeer?.Name);
             Assert.AreEqual(_Name, _TestedBeer?.Name);
-        }
-
-        [TestMethod]
-        public void Test_IsCarbonated()
-        {
-            Assert.IsNotNull(_TestedBeer);
-            Assert.AreEqual(_IsCarbonated, _TestedBeer?.IsCarbonated);
         }
 
         [TestMethod]
@@ -70,7 +62,6 @@ namespace TestOoDrinkDemoData
     public class Test_Beer_New_Bogus
     {
         private const string _Name = "Bogus Flat";
-        private const bool _IsCarbonated = false;
         private const CarbonationEnum _Carbonation = CarbonationEnum.None;
         private const double _AlcoholPercentage = 6.5;
         private const string _ExpectedDescription = _Name + ", not carbonated, 6.5%.";
@@ -88,13 +79,6 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedBeer?.Name);
             Assert.AreEqual(_Name, _TestedBeer.Name);
-        }
-
-        [TestMethod]
-        public void Test_IsCarbonated()
-        {
-            Assert.IsNotNull(_TestedBeer);
-            Assert.AreEqual(_IsCarbonated, _TestedBeer?.IsCarbonated);
         }
 
         [TestMethod]

@@ -2,14 +2,6 @@
 {
     public class Beer: Drink
     {
-        [Obsolete]
-        public Beer(string NameIn, bool IsCarbonatedIn, double AlcoholPercentageIn) : 
-                this(NameIn, CarbonationTypeFromBool(IsCarbonatedIn), 
-                    AlcoholPercentageIn)
-        {
-            //AlcoholPercentage = AlcoholPercentageIn;
-        }
-
         public Beer(string NameIn, CarbonationEnum CarbonationTypeIn,
                 double AlcoholPercentageIn):
                 base(NameIn, CarbonationTypeIn)

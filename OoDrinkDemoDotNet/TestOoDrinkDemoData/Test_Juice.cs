@@ -6,7 +6,6 @@ namespace TestOoDrinkDemoData
     public class Test_Juice_Apple
     {
         private const string _Name = "Apple Juice";
-        private const bool _IsCarbonated = false;
         private const CarbonationEnum _Carbonation = CarbonationEnum.None;
         private const string _Fruit = "apples";
         private const string _ExpectedDescription = _Name + ", not carbonated, made from apples.";
@@ -32,13 +31,6 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedJuice?.Name);
             Assert.AreEqual(_Name, _TestedJuice?.Name);
-        }
-
-        [TestMethod]
-        public void Test_IsCarbonated()
-        {
-            Assert.IsNotNull(_TestedJuice);
-            Assert.AreEqual(_IsCarbonated, _TestedJuice.IsCarbonated);
         }
 
         [TestMethod]
@@ -71,7 +63,6 @@ namespace TestOoDrinkDemoData
     public class Test_Juice_Lemonade
     {
         private const string _Name = "Sparkling Lemonade";
-        private const bool _IsCarbonated = true;
         private const CarbonationEnum _Carbonation = CarbonationEnum.Carbonated;
         private const string _Fruit = "lemons";
         private const string _ExpectedDescription = _Name + ", carbonated, made from lemons.";
@@ -89,13 +80,6 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedJuice?.Name);
             Assert.AreEqual(_Name, _TestedJuice?.Name);
-        }
-
-        [TestMethod]
-        public void Test_IsCarbonated()
-        {
-            Assert.IsNotNull(_TestedJuice);
-            Assert.AreEqual(_IsCarbonated, _TestedJuice.IsCarbonated);
         }
 
         [TestMethod]

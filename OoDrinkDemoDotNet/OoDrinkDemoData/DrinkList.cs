@@ -8,10 +8,17 @@ namespace OoDrinkDemoData
 {
     public class DrinkList: List<Drink>
     {
-        public IEnumerable<string> Descriptions()
+        public List<string> Descriptions()
         {
-            return from Drink CurDrink in this
-                               select CurDrink.Description;
+            //return from Drink CurDrink in this
+            //       select CurDrink.Description;
+            //Instructions say to use a loop instead.
+            List<string> MyList = new();
+            foreach (Drink CurDrink in this)
+            {
+                MyList.Add(CurDrink.Description);
+            }
+            return MyList;
         }
     }
 }

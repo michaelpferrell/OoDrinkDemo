@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOoDrinkDemoData", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OoDrinkDemoData", "OoDrinkDemoData\OoDrinkDemoData.csproj", "{85DAB5F8-1431-4FBF-B080-006791FDC0BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OoDrinkDemoWinForms", "OoDrinkDemoWinForms\OoDrinkDemoWinForms.csproj", "{78DE8A1F-F7F7-4B9C-80B0-8FE4E38DB1EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{85DAB5F8-1431-4FBF-B080-006791FDC0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85DAB5F8-1431-4FBF-B080-006791FDC0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85DAB5F8-1431-4FBF-B080-006791FDC0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DE8A1F-F7F7-4B9C-80B0-8FE4E38DB1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DE8A1F-F7F7-4B9C-80B0-8FE4E38DB1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DE8A1F-F7F7-4B9C-80B0-8FE4E38DB1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DE8A1F-F7F7-4B9C-80B0-8FE4E38DB1EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

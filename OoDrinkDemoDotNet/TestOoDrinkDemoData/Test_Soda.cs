@@ -7,6 +7,7 @@ namespace TestOoDrinkDemoData
     {
         private const string _Name = "Pepsi";
         private const bool _IsCarbonated = true;
+        private const CarbonationEnum _Carbonation = CarbonationEnum.Carbonated;
         private const string _ExpectedDescription = _Name + ", carbonated.";
 
         private Soda? _TestedSoda = null;
@@ -14,7 +15,7 @@ namespace TestOoDrinkDemoData
         [TestInitialize]
         public void SetUp()
         {
-            _TestedSoda = new Soda(_Name, _IsCarbonated);
+            _TestedSoda = new Soda(_Name, _Carbonation);
         }
 
         [TestMethod]
@@ -40,6 +41,13 @@ namespace TestOoDrinkDemoData
         }
 
         [TestMethod]
+        public void Test_CarbonationType()
+        {
+            Assert.IsNotNull(_TestedSoda);
+            Assert.AreEqual(_Carbonation, _TestedSoda?.CarbonationType);
+        }
+
+        [TestMethod]
         public void Test_Description()
         {
             string? CachedDescription = _TestedSoda?.Description;
@@ -54,14 +62,15 @@ namespace TestOoDrinkDemoData
     {
         private const string _Name = "Nitro Pepsi";
         private const bool _IsCarbonated = false;
-        private const string _ExpectedDescription = _Name + ", not carbonated.";
+        private const CarbonationEnum _Carbonation = CarbonationEnum.Nitrogenated;
+        private const string _ExpectedDescription = _Name + ", nitrogenated.";
 
         private Soda? _TestedSoda = null;
 
         [TestInitialize]
         public void SetUp()
         {
-            _TestedSoda = new Soda(_Name, _IsCarbonated);
+            _TestedSoda = new Soda(_Name, _Carbonation);
         }
 
         [TestMethod]
@@ -76,6 +85,13 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedSoda);
             Assert.AreEqual(_IsCarbonated, _TestedSoda.IsCarbonated);
+        }
+
+        [TestMethod]
+        public void Test_CarbonationType()
+        {
+            Assert.IsNotNull(_TestedSoda);
+            Assert.AreEqual(_Carbonation, _TestedSoda?.CarbonationType);
         }
 
         [TestMethod]

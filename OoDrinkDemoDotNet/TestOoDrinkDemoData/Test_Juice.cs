@@ -7,6 +7,7 @@ namespace TestOoDrinkDemoData
     {
         private const string _Name = "Apple Juice";
         private const bool _IsCarbonated = false;
+        private const CarbonationEnum _Carbonation = CarbonationEnum.None;
         private const string _Fruit = "apples";
         private const string _ExpectedDescription = _Name + ", not carbonated, made from apples.";
 
@@ -15,7 +16,7 @@ namespace TestOoDrinkDemoData
         [TestInitialize]
         public void SetUp()
         {
-            _TestedJuice = new Juice(_Name, _IsCarbonated, _Fruit);
+            _TestedJuice = new Juice(_Name, _Carbonation, _Fruit);
         }
 
         [TestMethod]
@@ -38,6 +39,13 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedJuice);
             Assert.AreEqual(_IsCarbonated, _TestedJuice.IsCarbonated);
+        }
+
+        [TestMethod]
+        public void Test_CarbonationType()
+        {
+            Assert.IsNotNull(_TestedJuice);
+            Assert.AreEqual(_Carbonation, _TestedJuice?.CarbonationType);
         }
 
         [TestMethod]
@@ -64,6 +72,7 @@ namespace TestOoDrinkDemoData
     {
         private const string _Name = "Sparkling Lemonade";
         private const bool _IsCarbonated = true;
+        private const CarbonationEnum _Carbonation = CarbonationEnum.Carbonated;
         private const string _Fruit = "lemons";
         private const string _ExpectedDescription = _Name + ", carbonated, made from lemons.";
 
@@ -72,7 +81,7 @@ namespace TestOoDrinkDemoData
         [TestInitialize]
         public void SetUp()
         {
-            _TestedJuice = new Juice(_Name, _IsCarbonated, _Fruit);
+            _TestedJuice = new Juice(_Name, _Carbonation, _Fruit);
         }
 
         [TestMethod]
@@ -87,6 +96,13 @@ namespace TestOoDrinkDemoData
         {
             Assert.IsNotNull(_TestedJuice);
             Assert.AreEqual(_IsCarbonated, _TestedJuice.IsCarbonated);
+        }
+
+        [TestMethod]
+        public void Test_CarbonationType()
+        {
+            Assert.IsNotNull(_TestedJuice);
+            Assert.AreEqual(_Carbonation, _TestedJuice?.CarbonationType);
         }
 
         [TestMethod]

@@ -4,14 +4,7 @@
     {
         [Obsolete]
         public Drink(string NameIn, bool IsCarbonatedIn): 
-                this(NameIn, IsCarbonatedIn, CarbonationTypeFromBool(IsCarbonatedIn))
-        {
-        }
-
-        [Obsolete]
-        public Drink(string NameIn, bool IsCarbonatedIn, 
-                CarbonationEnum CarbonationTypeIn):
-                this(NameIn, CarbonationTypeIn)
+                this(NameIn, CarbonationTypeFromBool(IsCarbonatedIn))
         {
         }
 

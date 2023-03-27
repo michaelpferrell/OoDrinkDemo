@@ -2,8 +2,16 @@
 {
     public class Juice: Drink
     {
-        public Juice(string NameIn, bool IsCarbonated, string FruitIn):
-                base(NameIn, IsCarbonated)
+        [Obsolete]
+        public Juice(string NameIn, bool IsCarbonatedIn, string FruitIn):
+                this(NameIn, CarbonationTypeFromBool(IsCarbonatedIn),
+                    FruitIn)
+        {
+        }
+
+        public Juice(string NameIn, CarbonationEnum CarbonationTypeIn,
+                string FruitIn):
+                base(NameIn, CarbonationTypeIn)
         {
             Fruit = FruitIn;
         }

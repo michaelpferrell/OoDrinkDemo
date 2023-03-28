@@ -11,16 +11,16 @@ namespace OoDrinkDemoWinForms
     {
         public event EventHandler? DrinkListChanged;
 
-        private DrinkList? _Drinks = null;
+        private readonly DrinkList? _Drinks = null;
 
         public OoDrinkDemoMainViewModel()
         {
             _Drinks = new DrinkList();
         }
 
-        public IEnumerable<string>? DrinkDescriptions()
+        public string[] GetCurrentDrinkStrings()
         {
-            return _Drinks?.Descriptions();
+            return _Drinks?.Descriptions()?.ToArray();
         }
 
         public void AddDefaultDrinksToList()

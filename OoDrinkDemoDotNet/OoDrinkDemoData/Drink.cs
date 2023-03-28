@@ -44,18 +44,6 @@
                 }
             }
         }
-
-        protected static CarbonationEnum CarbonationTypeFromBool(bool BoolIn)
-        {
-            if (BoolIn)
-            {
-                return CarbonationEnum.Carbonated;
-            }
-            else
-            {
-                return CarbonationEnum.None;
-            }
-        }
     }
 
     public enum CarbonationEnum

@@ -15,8 +15,7 @@
         {
             get
             {
-                return string.Format("{0}, {1}, {2}.", Name, CarbonatedString,
-                        MadeFromString);
+                return string.Format("{0}, {1}, {2}.", Name, CarbonatedString, MadeFromString);
             }
         }
 

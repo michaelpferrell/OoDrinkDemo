@@ -23,11 +23,13 @@ namespace OoDrinkDemoWinForms
 
         private void ViewModel_DrinkListChanged(object? sender, EventArgs e)
         {
-            lstDrinks.Items.Clear();
-            //lstDrinks.Items.AddRange(new List<Object>( _ViewModel.DrinkDescriptions()));
-            //lstDrinks. .Items.AddRange(new string[] { _ViewModel.DrinkDescriptions() } );
-            lstDrinks.Items.AddRange(_ViewModel?.DrinkDescriptions()?.ToArray());
+            RefreshDrinkList();
         }
 
+        private void RefreshDrinkList()
+        {
+            lstDrinks.Items.Clear();
+            lstDrinks.Items.AddRange(_ViewModel.GetCurrentDrinkStrings());
+        }
     }
 }
